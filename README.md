@@ -6,14 +6,7 @@ Afin d'utiliser correctement PressVoice et ses intents, seules deux conditions d
 
   * iOS Deployment Target minimum version : 13.0
   * PressKit est nécessaire
-  * Le ```Development language``` de votre app doit être le francais
-
-Si vous souhaitez changer le development language de votre app de english à francais, suivez ces étapes :
-  - Depuis Xcode, ```Project``` > ```Info``` > ```Localizations``` > cliquez sur le petit + > ```French (fr)```
-  - Clique-droit sur le project, ```Show in finder```, clique droit sur le .xcodeproj, ```Afficher le contenu du paquet```
-  - Ouvrez le project.pbxproj avec un editeur de texte
-  - Recherchez la ligne ```developmentRegion = en;``` et changez ```en``` en ```fr```, CTRL+S et quittez l'éditeur
-  - Depuis Xcode, ```Info.plist``` > changez le ```DEVELOPMENT_LANGUAGE``` en ```France```
+  * Le français doit avoir été ajouté dans ```Project``` > ```Info``` > ```Localizations```
 
 ## Installation
 
@@ -37,8 +30,16 @@ L'installation de PressVoice et de l'extension Siri se feront manuellement en su
  * Drag & drop le PressVoice.xcframework dans votre dossier ```Framework``` se trouvant à la racine de votre projet (si le dossier n'existe pas, créez-le)
  * ```Add to targets``` le .xcframework à votre extension et à votre app
  * Selectionnez le fichier ```Intents.intentdefinition``` et changez les targets de votre app ainsi que de votre extension en ```No Generated Classes```
-
-<img width="254" alt="Capture d’écran 2021-07-26 à 12 55 19" src="https://user-images.githubusercontent.com/72382446/126978072-494d1186-95be-4c31-8a77-a31c07019812.png">
+ 
+ <img width="254" alt="Capture d’écran 2021-07-26 à 12 55 19" src="https://user-images.githubusercontent.com/72382446/126978072-494d1186-95be-4c31-8a77-a31c07019812.png">
+ 
+ ATTENTION :
+ 
+ Si le ```Development language``` de votre app n'est pas le français, veuillez suivre ces trois étapes supplémentaires :
+ 
+ * Selectionnez le fichier ```Intents.intentdefinition```, cliquez sur ```Localize...``` dans l'Inspector, choisissez ```Base``` et validez avec ```Localize```
+ * Selectionnez une nouvelle fois le fichier ```Intents.intentdefinition``` et cochez ```French```
+ * Selectionnez l'```Info.plist``` de votre app, et changez le ```Localization native development region``` en ```France```
 
 ### Remarques
 
